@@ -1,0 +1,40 @@
+link:https://www.hackerrank.com/challenges/the-power-sum/problem?isFullScreen=false
+
+Quick Notes:
+//
+
+
+
+
+
+//code
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int powerSum(int X,int N,int num){
+    int p=1;
+    
+    for(int i=0;i<N;i++){
+        p=p*num;}
+        if(p>X){
+            return 0;}
+            
+            if(p==X){
+                return 1;}
+                  
+                  
+                  return powerSum(X-p,N,num+1)+powerSum(X,N,num+1);
+            }
+            int main(){
+  int X;
+  int N;
+  
+  cin>>X>>N;
+  
+  cout<<powerSum(X,N,1);
+  return 0;
+                
+            }
+            
+        
